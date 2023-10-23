@@ -1,0 +1,24 @@
+#include<stdio.h>
+void main()
+{
+    printf("Program to check whether a number is an armstrong number\nGive number: ");
+    int r,q,cub=0,num;
+    scanf("%d",&num);
+    int temp=num;
+    while(num>0)
+    {
+        r=num%10;
+        q=num/10;
+        cub=cub+pow(r,3);
+        num=q;
+    }
+    printf("The sum of individual numbers of the number is %d\n",cub);
+    if(temp==cub)
+    {
+        printf("the given number is an armstrong number");
+    }
+    else
+    {
+        printf("the given number is not an armstrong number");
+    }
+}
